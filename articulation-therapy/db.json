@@ -1,0 +1,58 @@
+{ "sounds": [
+    {
+        "id": 1,
+        "name": "ar",
+        "words": ["star", "car", "far", "bark", "dark"],
+        "book": ["Are You My Mother by P.D. Eastman"],
+        "url" : "https://www.youtube.com/watch?v=veeGj6oJlpo",
+        "comments": []
+    },
+
+    {
+        "id": 2,
+        "name": "er",
+        "words": ["mother", "father", "brother", "sister", "teacher"],
+        "book": ["Over and Under the Pond by Kate Messner"],
+        "url": "https://www.youtube.com/watch?v=490uChIgbnk",
+        "comments": []
+    },
+
+    {
+        "id": 3,
+        "name": "or",
+        "words": ["more", "four", "pour", "core", "door"],
+        "book": ["Bear Snores On by Karma Wilson"],
+        "url": "https://www.youtube.com/watch?v=pCkRtyXq-fg",
+        "comments": []
+    },
+    
+    {
+        "id": 4,
+        "name": "air",
+        "words": [ "care", "fair", "dare", "lair", "tear" ],
+        "book": ["Bear Wants More by Karma Wilson"],
+        "url": "https://www.youtube.com/watch?v=vpOlz9YoWGI",
+        "comments": []
+    },
+    
+    {
+        "id": 5,
+        "name": "ire",
+        "words": ["fire", "buyer", "tire", "liar", "wire"],
+        "book": ["Fire Engines by Anne Rockwell"],
+        "url": "https://www.youtube.com/watch?v=_O3R-PB1UqU",
+        "comments": []
+    },
+   
+    {
+        "id": 6,
+        "name": "ear",
+        "words": ["year", "hear", "near", "fear", "pier"],
+        "book": ["Me and My Fear by Francesca Sanna"],
+        "url": "https://www.youtube.com/watch?v=yXcCZvxpym8",
+        "comments": []
+    }
+]
+}
+
+ 
