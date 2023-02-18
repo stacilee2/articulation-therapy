@@ -51,12 +51,16 @@
   float: bottom;
 }
 .games {
-  margin: 20px;
-  justify-content:flex-start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .games-list {
   border-style: outset;
   width: 300px;
-  padding: 0px;
-  margin: 2px;
+  padding: 2%;
+  margin: 10px;
+  box-shadow: 1px 2px 9px;
+  margin: 4em;
 }
