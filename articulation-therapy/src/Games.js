@@ -3,9 +3,11 @@ import React from 'react'
 function Games() {
   return (
     <div className="games">
+
+      <h4>To include positive reinforcement for drill practice, find your targeted sound below with a link to a game.</h4>
       
       <ul className="games-list">
-      <p>Find links to different Vocalic R Games Here:</p>
+      <p>Find Vocalic R Games Here:</p>
       <a className="App-link" href="https://wordwall.net/resource/29254522/speech-therapy/vocalic-ar">Vocalic -AR Game</a><br></br>
       <a className="App-link" href="https://wordwall.net/resource/14235591/air-picture-match">Vocalic -AIR Game</a><br></br>
       <a className="App-link" href="https://wordwall.net/resource/19024918/vocalic-r-or">Vocalic -OR Game</a><br></br>

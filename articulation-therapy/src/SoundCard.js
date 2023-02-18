@@ -4,9 +4,11 @@ function SoundCard( { sound } ) {
 
   return (
     <div className="card">
-      <h1>{sound.name}</h1>
+      <h2>{sound.name}</h2>
+      <span>Check each box as you practice each word</span>
       {sound.words.map(word =>
-        <li>{word}</li>)}
+        <ul className="word-list">{word}
+        <input type="checkbox" /></ul>)}
         <p> Book: {sound.book} </p>
         <a href={sound.url}> Read-Aloud: {sound.url} </a>
       </div>
