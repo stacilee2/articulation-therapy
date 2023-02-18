@@ -1,15 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom';
 import { Navbar } from 'react-bootstrap';
 
 function Navigation() {
     
-    const [searchInput, setSearchInput] = useState("");
+    // const [searchInput, setSearchInput] = useState("");
         
-        const handleChange = (e) => {
-          e.preventDefault();
-          setSearchInput(e.target.value);
-        };
+    //     const handleChange = (e) => {
+    //       e.preventDefault();
+    //       setSearchInput(e.target.value);
+    //     };
     
     return (
       <div>
