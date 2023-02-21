@@ -12,10 +12,14 @@ links to games based on targeted sound.
 This is a React.js application which uses JSX components to easily update and render onto the page.
 
 Table of Contents:
+
 -Home page: Information about me, Staci Rosales, and my credentials as well as a profile photo
+
 -Sounds page: sound cards with different targets
+
 -Games page: links to different articulation games
--Add Sound page: form to submit new sound, words, book, and book URL
+
+-Add Sound page: form to submit new sound, words, book, and book U
 
 Resources for GET and POST requests:
 http://localhost:3000/sounds
