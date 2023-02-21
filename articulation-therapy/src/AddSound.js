@@ -1,28 +1,35 @@
 import React, { useState } from "react";
 
-function AddSound() {
+function AddSound( {onAddSound} ) {
 
-    const [newSound, setNewSound] = useState("");
-    const [newWords, setNewWords] = useState("");
-    const [newBook, setNewBook] = useState("");
-    const [newURL, setNewURL] = useState("");
+    const [name, setName] = useState([]);
+    const [words, setWords] = useState([]);
+    const [book, setBook] = useState([]);
+    const [url, setUrl] = useState([]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(e,"submitted")
-        const soundData = {newSound, newWords, newBook, newURL}
-        console.log(soundData)
+  
+        fetch("http://localhost:3000/sounds", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name, words, book, url}),
+        })
+        .then ((r) => r.json())
+        .then ((data) => onAddSound(data));
     }
   
   return (
     <div className="container">
       <form className="add-sound" onSubmit={handleSubmit}>
-        <h3>Add a Sound Here!</h3>
+        <h3>Add a Sound Card Here!</h3>
         <input
           type="text"
           name="name"
-          onChange={(e) => setNewSound(e.target.value)}
-          value={newSound}
+          onChange={(e) => setName(e.target.value)}
+          value={name}
           placeholder="Enter a sound..."
           className="input-text"
         />
@@ -30,17 +37,17 @@ function AddSound() {
         <input
           type="text"
           name="name"
-          onChange={(e) => setNewWords(e.target.value)}
-          value={newWords}
-          placeholder="Enter five target words"
+          onChange={(e) => setWords(e.target.value)}
+          value={words}
+          placeholder="Enter target target words"
           className="input-text"
         />
         <br />
         <input
           type="text"
           name="image"
-          onChange={(e) => setNewBook(e.target.value)}
-          value={newBook}
+          onChange={(e) => setBook(e.target.value)}
+          value={book}
           placeholder="Enter a book"
           className="input-text"
         />
@@ -48,8 +55,8 @@ function AddSound() {
         <input
           type="text"
           name="image"
-          onChange={(e) => setNewURL(e.target.value)}
-          value={newURL}
+          onChange={(e) => setUrl(e.target.value)}
+          value={url}
           placeholder="Enter a book video URL"
           className="input-text"
         />

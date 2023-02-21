@@ -19,14 +19,15 @@ function App() {
     )
   }, []);
 
-console.log(sounds)
-
+  function handleAddSound(newSound) {
+    setSounds([...sounds, newSound])
+  }
 
     return (
       <Router>
       <div className="App">
-      <h1 className="header">Speech Therapy Sandbox
-      <h3>Ideas for Vocalic R Elicitation</h3>
+      <h1 className="header">Speech Therapy Sandbox:
+      <p>Ideas for Articulation Elicitation</p>
       </h1>
         <Navigation/>
         <Switch>
@@ -40,7 +41,7 @@ console.log(sounds)
             <Games />
           </Route>
           <Route exact path="/addsound">
-            <AddSound />
+            <AddSound onAddSound={handleAddSound}/>
           </Route>
         </Switch>
       </div>

@@ -26,7 +26,7 @@ function Navigation() {
         className="nav-link"
         activeStyle={{ fontWeight: "bold", color: "pink"
       }}>
-      Vocalic R Sounds
+      Sounds
     </NavLink>
     <NavLink 
       exact to="/games"
