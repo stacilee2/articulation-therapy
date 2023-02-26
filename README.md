@@ -4,7 +4,8 @@
 This application provides a variety of sound cards to target with speech therapy clients diagnosed with 
 speech sound or phonological disorders. Each sound card contains a word list to target, recommended
 book, and link to book read aloud to use in therapy sessions. The SLP can also add sound cards to target, 
-which come in handy to individualize each session. 
+which come in handy to individualize each session. To handle user input errors, error handling is added 
+for word list input. 
 
 To provide positive reinforcement with additional articulation practice, there is a game page with
 links to games based on targeted sound. 
@@ -19,7 +20,7 @@ Table of Contents:
 
 -Games page: links to different articulation games
 
--Add Sound page: form to submit new sound, words, book, and book U
+-Add Sound page: form to submit new sound, words, book, and book URL
 
 Resources for GET and POST requests:
 http://localhost:3000/sounds
