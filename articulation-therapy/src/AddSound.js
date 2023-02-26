@@ -2,29 +2,54 @@ import React, { useState } from "react";
 
 function AddSound( {onAddSound} ) {
 
-    const [name, setName] = useState([]);
-    const [words, setWords] = useState([]);
-    const [book, setBook] = useState([]);
-    const [url, setUrl] = useState([]);
+    const [name, setName] = useState("");
+    const [words, setWords] = useState("");
+    const [book, setBook] = useState("");
+    const [url, setUrl] = useState("");
+    const [errors, setErrors] = useState([])
 
     const handleSubmit = (e) => {
         e.preventDefault();
-  
-        fetch("http://localhost:3000/sounds", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ name, words, book, url}),
-        })
-        .then ((r) => r.json())
-        .then ((data) => onAddSound(data));
+
+        if ( words.includes(',') ) {
+          setWords(words)
+          handlePost()
+
+        } else {
+          setErrors(["Please include commas and spaces between each target word!"],
+          setTimeout(() => {
+            setErrors("")
+          }, 5000));
+          setWords("")
+        }
+        
+        function handlePost() {
+          fetch("http://localhost:3000/sounds", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ name, words, book, url}),
+            
+          })
+          .then ((r) => r.json())
+          .then ((data) => onAddSound(data));
+        
+          setName("")
+          setWords("")
+          setBook("")
+          setUrl("")
+        }
     }
+        
   
   return (
     <div className="container">
-      <form className="add-sound" onSubmit={handleSubmit}>
-        <h3>Add a Sound Card Here!</h3>
+      { errors.length > 0 ? errors.map((error, index)=> (
+        <p key={index} className="error" style={{ color: "red" }}> {error}</p>
+      )) : null }
+      <form className="form" onSubmit={handleSubmit}>
+        <h3>Want to individualize your session? Create your own sound card here!</h3>
         <input
           type="text"
           name="name"
@@ -51,7 +76,7 @@ function AddSound( {onAddSound} ) {
           placeholder="Enter a book"
           className="input-text"
         />
-        <br />
+        <br /> 
         <input
           type="text"
           name="image"
@@ -60,8 +85,7 @@ function AddSound( {onAddSound} ) {
           placeholder="Enter a book video URL"
           className="input-text"
         />
-        <br />
-        <br />
+        <br/><br></br>
         <input
           type="submit"
           name="submit"
@@ -69,6 +93,7 @@ function AddSound( {onAddSound} ) {
           className="submit"
         />
       </form>
+      
     </div>
   );
 }
