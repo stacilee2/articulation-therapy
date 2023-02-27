@@ -16,7 +16,7 @@ function AddSound( {onAddSound} ) {
           handlePost()
 
         } else {
-          setErrors(["Please include commas and spaces between each target word!"],
+          setErrors(["PLEASE INCLUDE COMMAS BETWEEN EACH TARGET WORD!"],
           setTimeout(() => {
             setErrors("")
           }, 5000));
@@ -45,8 +45,8 @@ function AddSound( {onAddSound} ) {
   
   return (
     <div className="container">
-      { errors.length > 0 ? errors.map((error, index)=> (
-        <p key={index} className="error" style={{ color: "red" }}> {error}</p>
+      { errors.length > 0 ? errors.map((error)=> (
+        <p key={error} className="error" style={{ color: "red" }}> {error}</p>
       )) : null }
       <form className="form" onSubmit={handleSubmit}>
         <h3>Want to individualize your session? Create your own sound card here!</h3>
@@ -86,12 +86,14 @@ function AddSound( {onAddSound} ) {
           className="input-text"
         />
         <br/><br></br>
+        <h4>After you submit, find your sound card on the Sounds page! Enjoy!</h4>
         <input
           type="submit"
           name="submit"
           value="Create Sound Card"
           className="submit"
         />
+       
       </form>
       
     </div>
