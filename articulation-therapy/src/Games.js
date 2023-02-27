@@ -4,7 +4,8 @@ function Games() {
   return (
     <div className="games">
 
-      <h4>To include positive reinforcement for drill practice, find your targeted sound below with a link to a game.</h4>
+      <h4 className="games">To include positive reinforcement for drill practice, </h4>
+      <h4 className="games">find your targeted sound below with a link to a game.</h4><br></br>
       
       <ul className="games-list">
       <p>Find Vocalic R Games Here:</p>
