@@ -1,58 +1,48 @@
-{ "sounds": [
+{
+  "sounds": [
     {
-        "id": 1,
-        "name": "ar",
-        "words": ["star", "car", "far", "bark", "dark"],
-        "book": ["Are You My Mother by P.D. Eastman"],
-        "url" : "https://www.youtube.com/watch?v=veeGj6oJlpo",
-        "comments": []
+      "name": "ar",
+      "words": "star, car, far, bark, dark, art, heart, farm, yard, card",
+      "book": "Are You My Mother by P.D. Eastman",
+      "url": "https://www.youtube.com/watch?v=veeGj6oJlpo",
+      "id": 1
     },
-
     {
-        "id": 2,
-        "name": "er",
-        "words": ["mother", "father", "brother", "sister", "teacher"],
-        "book": ["Over and Under the Pond by Kate Messner"],
-        "url": "https://www.youtube.com/watch?v=490uChIgbnk",
-        "comments": []
+      "name": "er",
+      "words": "mother, father brother, sister, teacher, dinner, turn, learn, whisper, spider",
+      "book": "Over and Under the Pond by Kate Messner",
+      "url": "https://www.youtube.com/watch?v=490uChIgbnk",
+      "id": 2
     },
-
     {
-        "id": 3,
-        "name": "or",
-        "words": ["more", "four", "pour", "core", "door"],
-        "book": ["Bear Snores On by Karma Wilson"],
-        "url": "https://www.youtube.com/watch?v=pCkRtyXq-fg",
-        "comments": []
+      "name": "or",
+      "words": "more, four, pour, core, door, score, chore, orange, forest, floor",
+      "book": "Bear Snores On by Karma Wilson",
+      "url": "https://www.youtube.com/watch?v=pCkRtyXq-fg",
+      "id": 3
     },
-    
     {
-        "id": 4,
-        "name": "air",
-        "words": [ "care", "fair", "dare", "lair", "tear" ],
-        "book": ["Bear Wants More by Karma Wilson"],
-        "url": "https://www.youtube.com/watch?v=vpOlz9YoWGI",
-        "comments": []
+      "name": "air",
+      "words": "care, fair, dare, lair, tear, parents, where, square, share, cherry",
+      "book": "Bear Wants More by Karma Wilson",
+      "url": "https://www.youtube.com/watch?v=vpOlz9YoWGI",
+      "id": 4
     },
-    
     {
-        "id": 5,
-        "name": "ire",
-        "words": ["fire", "buyer", "tire", "liar", "wire"],
-        "book": ["Fire Engines by Anne Rockwell"],
-        "url": "https://www.youtube.com/watch?v=_O3R-PB1UqU",
-        "comments": []
+      "name": "ire",
+      "words": "fire, buyer, tire, liar, wire, choir, dryer, hire, vampire, sapphire",
+      "book": "Fire Engines by Anne Rockwell",
+      "url": "https://www.youtube.com/watch?v=_O3R-PB1UqU",
+      "id": 5
     },
-   
     {
-        "id": 6,
-        "name": "ear",
-        "words": ["year", "hear", "near", "fear", "pier"],
-        "book": ["Me and My Fear by Francesca Sanna"],
-        "url": "https://www.youtube.com/watch?v=yXcCZvxpym8",
-        "comments": []
+      "name": "ear",
+      "words": "year, hear, near, fear, pier, cashier, cheer, pyramid, weird, gear",
+      "book": "Me and My Fear by Francesca Sanna",
+      "url": "https://www.youtube.com/watch?v=yXcCZvxpym8",
+      "id": 6
     }
-]
+  ]
 }
 
  
