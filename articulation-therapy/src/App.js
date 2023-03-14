@@ -3,16 +3,15 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import React, { useEffect, useState } from 'react'; 
 import Home from './Home';
 import Navigation from './Navigation';
-import Sounds from './Sounds';
+import SoundContainer from './SoundContainer';
 import Games from './Games';
 import AddSound from './AddSound';
 
-
 function App() {
-
+ 
   const [sounds, setSounds] = useState([])
-
-  useEffect( () => {
+  
+  useEffect(() => {
     fetch("http://localhost:3000/sounds")
     .then (res => res.json())
     .then (data => setSounds(data)
@@ -35,7 +34,7 @@ function App() {
             <Home />
           </Route>
           <Route exact path="/sounds">
-            <Sounds sounds = {sounds} />
+            <SoundContainer sounds = {sounds} />
           </Route>
           <Route exact path="/games">
             <Games />
