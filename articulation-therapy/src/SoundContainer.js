@@ -1,7 +1,7 @@
 import React from 'react'
 import SoundCard from './SoundCard';
 
-function Sounds( {sounds} ) {
+function SoundContainer( {sounds} ) {
 
   return (
     <div className="collection">
@@ -10,9 +10,9 @@ function Sounds( {sounds} ) {
       <li>PHRASE Level: I see..." "   OR   My..." "</li>
       <li>SENTENCE Level: Create a sentence using target</li>
      {
-      sounds.map((sound) => {
+      sounds.map((sound, id) => {
         return (
-        <SoundCard sound={sound} key={sound.id} className="sound-card" />
+        <SoundCard sound={sound} key={id} className="sound-card" />
         )
       })
     }
@@ -20,4 +20,4 @@ function Sounds( {sounds} ) {
   );
 }
 
-export default Sounds;
+export default SoundContainer;
