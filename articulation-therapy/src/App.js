@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import React, { useEffect, useState } from 'react'; 
 import Home from './Home';
 import Navigation from './Navigation';
@@ -8,22 +8,20 @@ import Games from './Games';
 import AddSound from './AddSound';
 
 function App() {
- 
-  const [sounds, setSounds] = useState([])
+
+  const [sounds, setSounds] = useState("") 
   
   useEffect(() => {
-    fetch("http://localhost:3000/sounds")
-    .then (res => res.json())
-    .then (data => setSounds(data)
-    )
+    fetch("http://localhost:3000/sounds") 
+    .then (res => res.json()) 
+    .then (data => setSounds(data) 
+    )                              
   }, []);
 
   function handleAddSound(newSound) {
     setSounds([...sounds, newSound])
   }
-
     return (
-      <Router>
       <div className="App">
       <h1 className="header">Speech Therapy Sandbox:
       <p>Ideas for Articulation Elicitation</p>
@@ -40,11 +38,10 @@ function App() {
             <Games />
           </Route>
           <Route exact path="/addsound">
-            <AddSound onAddSound={handleAddSound}/>
+            <AddSound onAddSound = {handleAddSound} />
           </Route>
         </Switch>
       </div>
-    </Router>
     )
 }
 
