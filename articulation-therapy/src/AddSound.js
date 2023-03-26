@@ -30,7 +30,6 @@ function AddSound( {onAddSound} ) {
               "Content-Type": "application/json",
             },
             body: JSON.stringify({ name, words, book, url }), 
-            
           })
           .then ((r) => r.json())
           .then ((data) => onAddSound(data));
@@ -50,7 +49,7 @@ function AddSound( {onAddSound} ) {
       <form className="form" onSubmit={handleSubmit}>
         <h3>Want to individualize your session?</h3>
         <h4>Create your own sound card here!</h4>
-        <label className="label"> Sound Target (ex: p or k)</label><br></br>
+        <label className="label"> Sound Target (ex: p or k)</label><br />
         <input
           type="text"
           name="name"
@@ -59,7 +58,7 @@ function AddSound( {onAddSound} ) {
           placeholder=""
         />
         <br />
-        <label className="label"> Five or More Target Words (include commas please)</label><br></br>
+        <label className="label"> Five or More Target Words (include commas)</label><br />
         <input
           type="text"
           name="name"
@@ -68,7 +67,7 @@ function AddSound( {onAddSound} ) {
           placeholder=""
         />
         <br />
-        <label className="label"> Title of Book and/or Author's Name</label><br></br>
+        <label className="label"> Title of Book and/or Author's Name</label><br />
         <input
           type="text"
           name="image"
@@ -77,7 +76,7 @@ function AddSound( {onAddSound} ) {
           placeholder=""
         />
         <br /> 
-        <label className="label"> Read-aloud Video Link</label><br></br>
+        <label className="label"> Read-aloud Video Link</label><br />
         <input
           type="text"
           name="image"
@@ -86,11 +85,12 @@ function AddSound( {onAddSound} ) {
           placeholder=""
         />
         <br />
-        <h4>After you submit, find your sound card on the <a href="http://localhost:3001/sounds">Sounds</a> page! Enjoy!</h4>
+        <h4>After you submit, find your sound card on the Sounds page! Enjoy!</h4>
         <input
           type="submit"
           name="submit"
           value="Create Sound Card"
+          className="submit"
         />
       </form>
     </div>
