@@ -21,6 +21,7 @@ function App() {
   function handleAddSound(newSound) {
     setSounds([...sounds, newSound])
   }
+
     return (
       <div className="App">
       <h1 className="header">Speech Therapy Sandbox:
@@ -38,7 +39,7 @@ function App() {
             <Games />
           </Route>
           <Route exact path="/addsound">
-            <AddSound onAddSound = {handleAddSound} />
+            <AddSound handleAddSound = {handleAddSound} />
           </Route>
         </Switch>
       </div>
