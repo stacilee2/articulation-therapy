@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function AddSound( {onAddSound} ) {
+function AddSound( { handleAddSound } ) {
 
     const [name, setName] = useState("");
     const [words, setWords] = useState("");
@@ -32,7 +32,7 @@ function AddSound( {onAddSound} ) {
             body: JSON.stringify({ name, words, book, url }), 
           })
           .then ((r) => r.json())
-          .then ((data) => onAddSound(data));
+          .then ((data) => handleAddSound(data));
         
           setName("")
           setWords("")
